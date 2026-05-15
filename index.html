@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pinehurst Golf Trip Command Center</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="motion-stage" aria-hidden="true">
+    <div class="photo-rotator" data-parallax="0.06">
+      <div class="photo-slide slide-one"></div>
+      <div class="photo-slide slide-two"></div>
+      <div class="photo-slide slide-three"></div>
+      <div class="photo-slide slide-four"></div>
+      <div class="photo-slide slide-five"></div>
+    </div>
+    <div class="photo-veil"></div>
+    <div class="grass-field layer-back" data-parallax="0.10"></div>
+    <div class="fairway-ribbon ribbon-one" data-parallax="0.18" data-rotate="-4"></div>
+    <div class="fairway-ribbon ribbon-two" data-parallax="0.28" data-rotate="5"></div>
+    <div class="fairway-ribbon ribbon-three" data-parallax="0.38" data-rotate="-7"></div>
+    <div class="grass-blades blades-left" data-parallax="0.22" data-rotate="2"></div>
+    <div class="grass-blades blades-right" data-parallax="0.32" data-rotate="-3"></div>
+    <div class="sun-glow" data-parallax="0.08"></div>
+  </div>
+  <header class="site-header">
+    <div class="brand">
+      <img class="brand-logo" src="assets/pineworst-logo.png" alt="Pineworst '26 logo" />
+      <div>
+        <div class="brand-kicker">Pineworst ’26</div>
+        <strong>Command Center</strong>
+      </div>
+    </div>
+    <nav>
+      <a href="#today">Today</a>
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#rounds">Rounds</a>
+      <a href="#scorecards">Scorecards</a>
+      <a href="#settle">Settle</a>
+      <a href="#rules">Rules</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero motion-card" data-tilt="-1.4">
+      <div class="hero-copy">
+        <div class="hero-logo-lockup">
+          <img src="assets/pineworst-logo.png" alt="Pineworst '26 logo" />
+          <span>Pineworst ’26</span>
+        </div>
+        <div class="event-badge">
+          <span class="badge-line">Official Unofficial</span>
+          <strong>Member-Guest Disaster Control</strong>
+        </div>
+        <p class="eyebrow">Pinehurst, NC · Tournament Operations</p>
+        <h1>Pineworst ’26 Command Center</h1>
+        <p class="lede">Classy enough for Pinehurst. Petty enough for a golf trip. Track Nassau matches, LRC, junk bets, balances, and the running weekend story from one mobile-friendly scoreboard.</p>
+        <div class="hero-actions">
+          <button onclick="scrollToId('today')">Today mode</button>
+          <button class="secondary" onclick="scrollToId('settle')">Who owes who?</button>
+        </div>
+      </div>
+      <aside class="hero-card">
+        <img class="card-watermark" src="assets/pineworst-logo.png" alt="" />
+        <span class="label">Current leader</span>
+        <div id="heroLeader" class="hero-money">—</div>
+        <div id="heroMeta" class="muted">Loading…</div>
+        <div class="chips">
+          <span>Net Best Ball</span><span>Nassau</span><span>LRC</span><span>Junk</span>
+        </div>
+      </aside>
+    </section>
+
+    <section id="today" class="today-panel motion-card" data-tilt="0.5">
+      <div class="today-main">
+        <p class="eyebrow">Today Mode</p>
+        <h2 id="todayCourse">Live Round</h2>
+        <p id="todayStatus" class="muted">Fast mobile view for the current round.</p>
+      </div>
+      <div id="todayCards" class="today-cards"></div>
+    </section>
+
+    <section class="stats-grid motion-card" id="leaderboard" data-tilt="0.8">
+      <article class="stat-card dark">
+        <span class="label">Weekend pot</span>
+        <strong id="totalPot">$0</strong>
+        <p>Estimated from current ledger.</p>
+      </article>
+      <article class="stat-card">
+        <span class="label">Live round</span>
+        <strong id="liveRoundName">—</strong>
+        <p id="liveRoundStatus">—</p>
+      </article>
+      <article class="stat-card">
+        <span class="label">Audit trail</span>
+        <strong id="betCount">0 entries</strong>
+        <p>Every bet call and scoring change gets logged.</p>
+      </article>
+    </section>
+
+    <section class="panel two-col motion-card" data-tilt="-0.6">
+      <div>
+        <div class="section-heading">
+          <p class="eyebrow">Master Board</p>
+          <h2>Money Leaderboard</h2>
+        </div>
+        <div id="players" class="players"></div>
+      </div>
+      <div class="war-card">
+        <div class="section-heading compact">
+          <p class="eyebrow">War Room</p>
+          <h2>Incoming Bet Feed</h2>
+        </div>
+        <div id="betFeed" class="feed"></div>
+      </div>
+    </section>
+
+    <section id="live" class="panel live-panel motion-card" data-tilt="0.7">
+      <div class="section-heading">
+        <p class="eyebrow">Live Operations</p>
+        <h2>Current Round Match Grid</h2>
+      </div>
+      <div id="matches" class="matches"></div>
+    </section>
+
+    <section id="rounds" class="panel motion-card" data-tilt="-0.4">
+      <div class="section-heading">
+        <p class="eyebrow">Weekend Schedule</p>
+        <h2>Rounds</h2>
+      </div>
+      <div id="roundCards" class="round-cards"></div>
+    </section>
+
+    <section id="scorecards" class="panel scorecards-panel motion-card" data-tilt="-0.5">
+      <div class="section-heading">
+        <p class="eyebrow">Reference Library</p>
+        <h2>Scorecards</h2>
+        <p class="muted">Course cards sent by text or Discord will be stored here so everyone can check hole handicaps, pars, and yardages without digging through the group chat.</p>
+      </div>
+      <div id="scorecardsGrid" class="scorecards-grid"></div>
+    </section>
+
+    <section id="settle" class="panel settle-panel motion-card" data-tilt="0.9">
+      <div>
+        <p class="eyebrow">Settlement Screen</p>
+        <h2>If the trip ended right now…</h2>
+        <p class="muted">This is the screen everyone pretends not to care about while absolutely caring.</p>
+      </div>
+      <div id="settlement" class="settlement"></div>
+    </section>
+
+    <section id="rules" class="panel rules-panel">
+      <div class="section-heading">
+        <p class="eyebrow">Operating Rules</p>
+        <h2>How we keep the peace</h2>
+      </div>
+      <ul id="rulesList"></ul>
+    </section>
+  </main>
+
+  <div class="sticky-live" id="stickyLive">
+    <span class="live-dot"></span>
+    <strong id="stickyRound">Live</strong>
+    <span id="stickyMatch">Loading scoreboard…</span>
+    <button onclick="scrollToId('today')">Open</button>
+  </div>
+
+  <footer>
+    Built for the Pinehurst trip · Static GitHub Pages-ready · Data lives in <code>data.js</code>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -97,6 +97,16 @@ function renderScorecards(){
         ${hasFile
           ? `<a class="scorecard-button" href="${card.file}" target="_blank" rel="noopener">View scorecard</a>`
           : `<button class="scorecard-button disabled" type="button" disabled>Awaiting card</button>`}
+        ${card.scores?.length ? `
+          <div class="scorecard-scores">
+            ${card.scores.map(row => `
+              <div class="score-row">
+                <div><b>${row.player}</b><small>Gross ${row.gross}</small></div>
+                <div class="score-holes">${row.holes.map((score, i) => `<span title="Hole ${i + 1}${row.strokes?.includes(i + 1) ? ' · stroke' : ''}">${score}${row.strokes?.includes(i + 1) ? '•' : ''}</span>`).join('')}</div>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
         ${card.receivedFrom ? `<small>Received from ${card.receivedFrom} · ${card.receivedAt || ''}</small>` : `<small>Send scorecard image in iMessage or Discord and I’ll attach it here.</small>`}
       </article>
     `;

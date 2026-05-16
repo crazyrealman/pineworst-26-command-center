@@ -18,7 +18,25 @@ window.TRIP_DATA = {
     { id: "hans", name: "Hans", index: 21.7, balance: 0, record: "0-0", note: "Ready" }
   ],
   rounds: [
-    { id: "r1", number: 1, course: "Pine Needles", status: "Upcoming", hole: null, format: "2-man net best ball Nassau", matches: [] },
+    {
+      id: "r1",
+      number: 1,
+      course: "Pine Needles",
+      status: "Card received",
+      hole: 18,
+      format: "2-man net best ball Nassau",
+      matches: [
+        {
+          teamA: ["Wes", "Hans"],
+          teamB: ["Ben 🍌", "Jon"],
+          front: "Pending Wes/Hans scores",
+          back: "Pending Wes/Hans scores",
+          total: "Ben/Jon card captured",
+          money: 0,
+          holes: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
+        }
+      ]
+    },
     { id: "r2", number: 2, course: "Mid Pines", status: "Upcoming", hole: null, format: "2-man net best ball Nassau", matches: [] },
     { id: "r3", number: 3, course: "Southern Pines", status: "Upcoming", hole: null, format: "2-man net best ball Nassau", matches: [] },
     { id: "r4", number: 4, course: "Tot Hill Farm", status: "Upcoming", hole: null, format: "2-man net best ball Nassau", matches: [] }
@@ -30,11 +48,15 @@ window.TRIP_DATA = {
       id: "pine-needles-card",
       course: "Pine Needles",
       round: "Round 1",
-      status: "Needed",
-      note: "Upload or text the card image and it will live here.",
-      file: null,
-      receivedFrom: null,
-      receivedAt: null
+      status: "Received · partial scores extracted",
+      note: "Visible handwritten scores captured from the uploaded card. Nassau result waits on Wes/Hans scores.",
+      file: "assets/scorecard-pine-needles-r1-ben-jon.jpg",
+      receivedFrom: "Jmo via Discord #golf-trip",
+      receivedAt: "Sat May 16, 2026 1:11 PM ET",
+      scores: [
+        { player: "Ben 🍌", gross: 89, holes: [5, 5, 5, 7, 5, 6, 4, 5, 5, 6, 5, 6, 5, 3, 6, 3, 4, 4], strokes: [2, 4, 6, 8, 9, 10, 11, 12, 14, 15, 17] },
+        { player: "Jon", gross: 81, holes: [4, 3, 6, 3, 6, 5, 5, 5, 5, 4, 5, 5, 4, 3, 5, 4, 4, 5], strokes: [2, 6, 9, 14, 15] }
+      ]
     },
     {
       id: "mid-pines-card",

@@ -8,38 +8,84 @@ window.TRIP_DATA = {
     liveRoundId: "r1"
   },
   players: [
-    { id: "wes", name: "Wes", index: 5.4, balance: 0, record: "0-0", note: "Ready" },
-    { id: "monza", name: "Monza", index: 7.8, balance: 0, record: "0-0", note: "Ready" },
-    { id: "paul", name: "Paul", index: 10.0, balance: 0, record: "0-0", note: "Ready" },
-    { id: "ben", name: "Ben 🍌", index: 10.1, balance: 0, record: "0-0", note: "Ready" },
-    { id: "jon", name: "Jon", index: 10.4, balance: 0, record: "0-0", note: "Ready" },
-    { id: "will", name: "Will", index: 13.9, balance: 0, record: "0-0", note: "Ready" },
-    { id: "scott", name: "Scott", index: 14.0, balance: 0, record: "0-0", note: "Ready" },
-    { id: "hans", name: "Hans", index: 21.7, balance: 0, record: "0-0", note: "Ready" }
+    { id: "wes", name: "Wes", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
+    { id: "monza", name: "Monza", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
+    { id: "paul", name: "Paul", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
+    { id: "ben", name: "Ben 🍌", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
+    { id: "jon", name: "Jon", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
+    { id: "will", name: "Will", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
+    { id: "scott", name: "Scott", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
+    { id: "hans", name: "Hans", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" }
   ],
   rounds: [
     {
       id: "r1",
       number: 1,
       course: "Pine Needles",
-      status: "Card received",
-      hole: 18,
+      date: "Thursday May 21",
+      tees: "White tees",
+      yardage: 6050,
+      par: 71,
+      status: "Pairings loaded",
+      hole: null,
       format: "2-man net best ball Nassau",
+      scorecardTemplate: "assets/blank-scorecards.pdf",
       matches: [
-        {
-          teamA: ["Wes", "Hans"],
-          teamB: ["Ben 🍌", "Jon"],
-          front: "Pending Wes/Hans scores",
-          back: "Pending Wes/Hans scores",
-          total: "Ben/Jon card captured",
-          money: 0,
-          holes: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
-        }
+        { foursome: "A", teeTime: "11:00 AM", teamA: ["Wes", "Hans"], teamB: ["Ben 🍌", "Jon"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") },
+        { foursome: "B", teeTime: "11:10 AM", teamA: ["Monza", "Scott"], teamB: ["Paul", "Will"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") }
       ]
     },
-    { id: "r2", number: 2, course: "Mid Pines", status: "Upcoming", hole: null, format: "2-man net best ball Nassau", matches: [] },
-    { id: "r3", number: 3, course: "Southern Pines", status: "Upcoming", hole: null, format: "2-man net best ball Nassau", matches: [] },
-    { id: "r4", number: 4, course: "Tot Hill Farm", status: "Upcoming", hole: null, format: "2-man net best ball Nassau", matches: [] }
+    {
+      id: "r2",
+      number: 2,
+      course: "Mid Pines",
+      date: "Friday May 22 AM",
+      tees: "White tees",
+      yardage: 6100,
+      par: 72,
+      status: "Pairings loaded",
+      hole: null,
+      format: "2-man net best ball Nassau",
+      scorecardTemplate: "assets/blank-scorecards.pdf",
+      matches: [
+        { foursome: "A", teeTime: "8:35 AM", teamA: ["Wes", "Scott"], teamB: ["Paul", "Jon"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") },
+        { foursome: "B", teeTime: "8:45 AM", teamA: ["Monza", "Will"], teamB: ["Ben 🍌", "Hans"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") }
+      ]
+    },
+    {
+      id: "r3",
+      number: 3,
+      course: "Southern Pines",
+      date: "Friday May 22 PM",
+      tees: "White tees",
+      yardage: 5935,
+      par: 71,
+      status: "Pairings loaded",
+      hole: null,
+      format: "2-man net best ball Nassau",
+      scorecardTemplate: "assets/blank-scorecards.pdf",
+      matches: [
+        { foursome: "A", teeTime: "1:33 PM", teamA: ["Wes", "Will"], teamB: ["Monza", "Jon"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") },
+        { foursome: "B", teeTime: "1:43 PM", teamA: ["Paul", "Ben 🍌"], teamB: ["Scott", "Hans"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") }
+      ]
+    },
+    {
+      id: "r4",
+      number: 4,
+      course: "Tot Hill Farm",
+      date: "Saturday May 23",
+      tees: "Fezler/White",
+      yardage: 5697,
+      par: 72,
+      status: "Pairings loaded",
+      hole: null,
+      format: "2-man net best ball Nassau",
+      scorecardTemplate: "assets/blank-scorecards.pdf",
+      matches: [
+        { foursome: "A", teeTime: "10:20 AM", teamA: ["Wes", "Jon"], teamB: ["Monza", "Ben 🍌"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") },
+        { foursome: "B", teeTime: "10:30 AM", teamA: ["Paul", "Hans"], teamB: ["Will", "Scott"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") }
+      ]
+    }
   ],
   bets: [],
   settlement: [],

@@ -39,7 +39,7 @@ function renderMatches(){
     ? live.matches.map(m=>`
       <article class="match">
         <div class="match-head">
-          <div><div class="teams">${m.teamA.join(' / ')}</div><div class="muted">vs ${m.teamB.join(' / ')}</div></div>
+          <div><div class="teams">${m.teamA.join(' / ')}</div><div class="muted">Foursome ${m.foursome || ''}${m.teeTime ? ` · ${m.teeTime}` : ''} · vs ${m.teamB.join(' / ')}</div></div>
           <div class="match-money">${m.money ? '+' + money(m.money) : '$0'}</div>
         </div>
         <div class="match-lines"><div><span>Front</span><b>${m.front}</b></div><div><span>Back</span><b>${m.back}</b></div><div><span>Total</span><b>${m.total}</b></div></div>
@@ -54,7 +54,7 @@ function renderRounds(){
     <article class="round-card">
       <div class="num">R${r.number}</div>
       <h3>${r.course}</h3>
-      <p class="muted">${r.format}</p>
+      <p class="muted">${r.date ? `${r.date} · ` : ''}${r.tees ? `${r.tees} · ` : ''}${r.par ? `Par ${r.par} · ` : ''}${r.yardage ? `${r.yardage.toLocaleString()} yds` : r.format}</p>
       <span class="status ${r.status === 'Live' ? 'live' : ''}">${r.status}${r.hole ? ` · Hole ${r.hole}` : ''}</span>
     </article>
   `).join('');
@@ -69,7 +69,7 @@ function renderToday(){
 
   const matchSummary = live.matches.map(m => `
     <article class="today-card">
-      <span class="today-label">${m.teamA.join(' / ')} vs ${m.teamB.join(' / ')}</span>
+      <span class="today-label">${m.foursome ? `Foursome ${m.foursome} · ` : ''}${m.teeTime ? `${m.teeTime} · ` : ''}${m.teamA.join(' / ')} vs ${m.teamB.join(' / ')}</span>
       <strong>${m.total}</strong>
       <small>Front: ${m.front} · Back: ${m.back}</small>
     </article>

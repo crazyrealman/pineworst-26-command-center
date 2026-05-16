@@ -7,7 +7,7 @@ function renderHero(){
   const leader = [...data.players].sort((a,b)=>b.balance-a.balance)[0];
   document.getElementById('heroLeader').textContent = `${leader.name} ${money(leader.balance)}`;
   document.getElementById('heroMeta').textContent = `${leader.record} weekend record · ${leader.note}`;
-  const pot = data.players.reduce((sum,p)=>sum+Math.abs(p.balance),0) + 160;
+  const pot = data.players.reduce((sum,p)=>sum+Math.abs(p.balance),0);
   document.getElementById('totalPot').textContent = money(pot);
   const live = data.rounds.find(r=>r.id === data.trip.liveRoundId) || data.rounds[0];
   document.getElementById('liveRoundName').textContent = live.course;
@@ -26,23 +26,27 @@ function renderPlayers(){
 }
 
 function renderFeed(){
-  document.getElementById('betFeed').innerHTML = data.bets.map(b=>`
-    <div class="feed-item"><div class="feed-time">${b.time}</div><div><b>${b.type}</b><p>${b.text}</p></div></div>
-  `).join('');
+  document.getElementById('betFeed').innerHTML = data.bets.length
+    ? data.bets.map(b=>`
+      <div class="feed-item"><div class="feed-time">${b.time}</div><div><b>${b.type}</b><p>${b.text}</p></div></div>
+    `).join('')
+    : `<div class="feed-empty"><b>No bets logged yet.</b><p>When the trip starts, Nassau calls, LRC results, junk bets, and disputes will appear here.</p></div>`;
 }
 
 function renderMatches(){
   const live = data.rounds.find(r=>r.id === data.trip.liveRoundId) || data.rounds[0];
-  document.getElementById('matches').innerHTML = live.matches.map(m=>`
-    <article class="match">
-      <div class="match-head">
-        <div><div class="teams">${m.teamA.join(' / ')}</div><div class="muted">vs ${m.teamB.join(' / ')}</div></div>
-        <div class="match-money">${m.money ? '+' + money(m.money) : '$0'}</div>
-      </div>
-      <div class="match-lines"><div><span>Front</span><b>${m.front}</b></div><div><span>Back</span><b>${m.back}</b></div><div><span>Total</span><b>${m.total}</b></div></div>
-      <div class="holes">${m.holes.map((h,i)=>`<div class="hole ${h==='W'?'win':''} ${h==='L'?'loss':''}"><strong>${i+1}</strong>${h}</div>`).join('')}</div>
-    </article>
-  `).join('');
+  document.getElementById('matches').innerHTML = live.matches.length
+    ? live.matches.map(m=>`
+      <article class="match">
+        <div class="match-head">
+          <div><div class="teams">${m.teamA.join(' / ')}</div><div class="muted">vs ${m.teamB.join(' / ')}</div></div>
+          <div class="match-money">${m.money ? '+' + money(m.money) : '$0'}</div>
+        </div>
+        <div class="match-lines"><div><span>Front</span><b>${m.front}</b></div><div><span>Back</span><b>${m.back}</b></div><div><span>Total</span><b>${m.total}</b></div></div>
+        <div class="holes">${m.holes.map((h,i)=>`<div class="hole ${h==='W'?'win':''} ${h==='L'?'loss':''}"><strong>${i+1}</strong>${h}</div>`).join('')}</div>
+      </article>
+    `).join('')
+    : `<article class="match empty-match"><div class="teams">Matches not loaded yet</div><div class="muted">Teams and pairings will appear here once the first round is set.</div></article>`;
 }
 
 function renderRounds(){
@@ -100,9 +104,11 @@ function renderScorecards(){
 }
 
 function renderSettlement(){
-  document.getElementById('settlement').innerHTML = data.settlement.map((s,i)=>`
-    <div class="settle-row ${i===0 ? 'danger-row' : ''}"><span><b>${s.from}</b> pays <b>${s.to}</b></span><span>${money(s.amount)}</span></div>
-  `).join('');
+  document.getElementById('settlement').innerHTML = data.settlement.length
+    ? data.settlement.map((s,i)=>`
+      <div class="settle-row ${i===0 ? 'danger-row' : ''}"><span><b>${s.from}</b> pays <b>${s.to}</b></span><span>${money(s.amount)}</span></div>
+    `).join('')
+    : `<div class="settle-row"><span>No money owed yet</span><span>$0</span></div>`;
 }
 
 function renderRules(){

@@ -9,13 +9,13 @@ window.TRIP_DATA = {
   },
   players: [
     { id: "wes", name: "Wes", index: 6.2, balance: 0, record: "0-0", note: "Handicap updated" },
-    { id: "monza", name: "Monza", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
+    { id: "monza", name: "Monza", index: 7.8, balance: 0, record: "0-0", note: "Handicap updated" },
     { id: "paul", name: "Paul", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
-    { id: "ben", name: "Ben 🍌", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
-    { id: "jon", name: "Jon", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
-    { id: "will", name: "Will", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
+    { id: "ben", name: "Ben 🍌", index: "TBD", balance: 0, record: "0-0", note: "Confirm 14.8 — novelty cert received" },
+    { id: "jon", name: "Jon", index: 10.2, balance: 0, record: "0-0", note: "Handicap updated" },
+    { id: "will", name: "Will", index: 14.1, balance: 0, record: "0-0", note: "Handicap updated" },
     { id: "scott", name: "Scott", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
-    { id: "hans", name: "Hans", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" }
+    { id: "hans", name: "Hans", index: 22.7, balance: 0, record: "0-0", note: "Handicap updated" }
   ],
   rounds: [
     {

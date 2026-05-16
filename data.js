@@ -8,7 +8,7 @@ window.TRIP_DATA = {
     liveRoundId: "r1"
   },
   players: [
-    { id: "wes", name: "Wes", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
+    { id: "wes", name: "Wes", index: 6.2, balance: 0, record: "0-0", note: "Handicap updated" },
     { id: "monza", name: "Monza", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
     { id: "paul", name: "Paul", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
     { id: "ben", name: "Ben 🍌", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },

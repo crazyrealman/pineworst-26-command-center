@@ -10,8 +10,8 @@ window.TRIP_DATA = {
   players: [
     { id: "wes", name: "Wes", index: 6.2, balance: 0, record: "0-0", note: "Handicap updated" },
     { id: "monza", name: "Monza", index: 7.8, balance: 0, record: "0-0", note: "Handicap updated" },
-    { id: "paul", name: "Paul", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
-    { id: "ben", name: "Ben 🍌", index: "TBD", balance: 0, record: "0-0", note: "Confirm 14.8 — novelty cert received" },
+    { id: "paul", name: "Paul", index: 12, balance: 0, record: "0-0", note: "Handicap locked by committee" },
+    { id: "ben", name: "Ben 🍌", index: 14.8, balance: 0, record: "0-0", note: "Locked at 14.8; cattle prod clause pending" },
     { id: "jon", name: "Jon", index: 10.2, balance: 0, record: "0-0", note: "Handicap updated" },
     { id: "will", name: "Will", index: 14.1, balance: 0, record: "0-0", note: "Handicap updated" },
     { id: "scott", name: "Scott", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },

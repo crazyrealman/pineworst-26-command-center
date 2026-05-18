@@ -94,15 +94,11 @@ window.TRIP_DATA = {
       id: "pine-needles-card",
       course: "Pine Needles",
       round: "Round 1",
-      status: "Received · partial scores extracted",
-      note: "Visible handwritten scores captured from the uploaded card. Nassau result waits on Wes/Hans scores.",
-      file: "assets/scorecard-pine-needles-r1-ben-jon.jpg",
-      receivedFrom: "Jmo via Discord #golf-trip",
-      receivedAt: "Sat May 16, 2026 1:11 PM ET",
-      scores: [
-        { player: "Ben 🍌", gross: 89, holes: [5, 5, 5, 7, 5, 6, 4, 5, 5, 6, 5, 6, 5, 3, 6, 3, 4, 4], strokes: [2, 4, 6, 8, 9, 10, 11, 12, 14, 15, 17] },
-        { player: "Jon", gross: 81, holes: [4, 3, 6, 3, 6, 5, 5, 5, 5, 4, 5, 5, 4, 3, 5, 4, 4, 5], strokes: [2, 6, 9, 14, 15] }
-      ]
+      status: "Needed",
+      note: "Ready for the first uploaded scorecard.",
+      file: null,
+      receivedFrom: null,
+      receivedAt: null
     },
     {
       id: "mid-pines-card",

@@ -31,7 +31,7 @@ window.TRIP_DATA = {
       format: "2-man net best ball Nassau",
       scorecardTemplate: "assets/scorecards/pine-needles-updated-scorecards-2026-05-21.pdf",
       matches: [
-        { foursome: "A", teeTime: "11:00 AM", teamA: ["Wes", "Hans"], teamB: ["Ben 🍌", "Jon"], front: "Ben/Jon 2 up", back: "Ben/Jon 1 up — H15 pending", total: "Ben/Jon 3 up — H15 pending", money: 0, holes: ["L", "L", "W", "L", "L", "W", "W", "T", "L", "W", "W", "T", "L", "L", "?", "T", "T", "L"] },
+        { foursome: "A", teeTime: "11:00 AM", teamA: ["Wes", "Hans"], teamB: ["Ben 🍌", "Jon"], front: "Ben/Jon 2 up", back: "Ben/Jon 1 up", total: "Ben/Jon 3 up", money: 0, holes: ["L", "L", "W", "L", "L", "W", "W", "T", "L", "W", "W", "T", "L", "L", "T", "T", "T", "L"] },
         { foursome: "B", teeTime: "11:10 AM", teamA: ["Monza", "Scott"], teamB: ["Paul", "Will"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") }
       ]
     },
@@ -94,16 +94,16 @@ window.TRIP_DATA = {
       id: "pine-needles-card",
       course: "Pine Needles",
       round: "Round 1",
-      status: "Thru 18 — H15 pending",
-      note: "Group A scorecard photo logged through 18. Hole 15 is unclear/missing for W/H/B; current match read: Ben/Jon front 2 up, back 1 up pending H15, total 3 up pending H15.",
-      file: "assets/scorecards/pine-needles-group-a-thru-18-h15-pending-2026-05-21.jpg",
+      status: "Final posted",
+      note: "Group A final scorecard logged. Match result: Ben/Jon win front 2 up, back 1 up, total 3 up. Hole 15 clarified as W4 / H8 / J5 / B7.",
+      file: "assets/scorecards/pine-needles-group-a-final-2026-05-21.jpg",
       receivedFrom: "Wes",
-      receivedAt: "May 21, 2026 3:35 PM",
+      receivedAt: "May 21, 2026 4:01 PM",
       scores: [
-        { player: "Wes", gross: "84 + H15", holes: [6, 6, 4, 4, 4, 5, 4, 5, 6, 6, 6, 5, 4, 5, "?", 4, 6, 4], strokes: [2, 6, 7, 10, 14] },
-        { player: "Hans", gross: "102 + H15", holes: [7, 7, 4, 7, 7, 5, 5, 5, 7, 6, 5, 7, 5, 6, "?", 6, 8, 5], strokes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] },
+        { player: "Wes", gross: "88", holes: [6, 6, 4, 4, 4, 5, 4, 5, 6, 6, 6, 5, 4, 5, 4, 4, 6, 4], strokes: [2, 6, 7, 10, 14] },
+        { player: "Hans", gross: "110", holes: [7, 7, 4, 7, 7, 5, 5, 5, 7, 6, 5, 7, 5, 6, 8, 6, 8, 5], strokes: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18] },
         { player: "Jon", gross: "87", holes: [5, 5, 4, 4, 3, 6, 6, 4, 4, 6, 5, 5, 5, 4, 5, 4, 8, 4], strokes: [1, 2, 4, 5, 6, 7, 10, 14, 15, 17, 18] },
-        { player: "Ben 🍌", gross: "96 + H15", holes: [6, 6, 4, 4, 4, 6, 6, 6, 7, 6, 6, 8, 4, 5, "?", 6, 7, 5], strokes: [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18] }
+        { player: "Ben 🍌", gross: "102", holes: [6, 6, 4, 4, 4, 5, 6, 6, 7, 6, 6, 8, 4, 5, 7, 6, 7, 5], strokes: [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18] }
       ],
     },
     {

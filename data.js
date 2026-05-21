@@ -8,13 +8,13 @@ window.TRIP_DATA = {
     liveRoundId: "r1"
   },
   players: [
-    { id: "wes", name: "Wes", index: 6.2, balance: 0, record: "0-0", note: "Handicap updated" },
+    { id: "wes", name: "Wes", index: 5.4, balance: 0, record: "0-0", note: "Handicap updated" },
     { id: "monza", name: "Monza", index: 7.8, balance: 0, record: "0-0", note: "Handicap updated" },
     { id: "paul", name: "Paul", index: 12, balance: 0, record: "0-0", note: "Handicap locked by committee" },
     { id: "ben", name: "Ben 🍌", index: 14.8, balance: 0, record: "0-0", note: "Locked at 14.8; cattle prod clause pending" },
     { id: "jon", name: "Jon", index: 10.2, balance: 0, record: "0-0", note: "Handicap updated" },
     { id: "will", name: "Will", index: 14.1, balance: 0, record: "0-0", note: "Handicap updated" },
-    { id: "scott", name: "Scott", index: "TBD", balance: 0, record: "0-0", note: "Update handicap" },
+    { id: "scott", name: "Scott", index: 13.6, balance: 0, record: "0-0", note: "Handicap updated" },
     { id: "hans", name: "Hans", index: 22.7, balance: 0, record: "0-0", note: "Handicap updated" }
   ],
   rounds: [
@@ -24,12 +24,12 @@ window.TRIP_DATA = {
       course: "Pine Needles",
       date: "Thursday May 21",
       tees: "White tees",
-      yardage: 6050,
+      yardage: 6002,
       par: 71,
-      status: "Pairings loaded",
+      status: "Updated scorecards loaded",
       hole: null,
       format: "2-man net best ball Nassau",
-      scorecardTemplate: "assets/blank-scorecards.pdf",
+      scorecardTemplate: "assets/scorecards/pine-needles-updated-scorecards-2026-05-21.pdf",
       matches: [
         { foursome: "A", teeTime: "11:00 AM", teamA: ["Wes", "Hans"], teamB: ["Ben 🍌", "Jon"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") },
         { foursome: "B", teeTime: "11:10 AM", teamA: ["Monza", "Scott"], teamB: ["Paul", "Will"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") }
@@ -94,11 +94,11 @@ window.TRIP_DATA = {
       id: "pine-needles-card",
       course: "Pine Needles",
       round: "Round 1",
-      status: "Needed",
-      note: "Ready for the first uploaded scorecard.",
-      file: null,
-      receivedFrom: null,
-      receivedAt: null
+      status: "Saved",
+      note: "Updated Pine Needles round packet with handicap sheet and printable Group 1 / Group 2 scorecards.",
+      file: "assets/scorecards/pine-needles-updated-scorecards-2026-05-21.pdf",
+      receivedFrom: "Wes",
+      receivedAt: "May 21, 2026 10:40 AM"
     },
     {
       id: "mid-pines-card",

@@ -32,7 +32,7 @@ window.TRIP_DATA = {
       scorecardTemplate: "assets/scorecards/pine-needles-updated-scorecards-2026-05-21.pdf",
       matches: [
         { foursome: "A", teeTime: "11:00 AM", teamA: ["Wes", "Hans"], teamB: ["Ben 🍌", "Jon"], front: "Ben/Jon 2 up", back: "Ben/Jon 1 up", total: "Ben/Jon 3 up", money: 0, holes: ["L", "L", "W", "L", "L", "W", "W", "T", "L", "W", "W", "T", "L", "L", "T", "T", "T", "L"] },
-        { foursome: "B", teeTime: "11:10 AM", teamA: ["Monza", "Scott"], teamB: ["Paul", "Will"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") }
+        { foursome: "B", teeTime: "11:10 AM", teamA: ["Monza", "Scott"], teamB: ["Paul", "Will"], front: "Tied", back: "Paul/Will 2 up", total: "Paul/Will 2 up", money: 0, holes: ["W", "W", "W", "L", "W", "T", "L", "L", "L", "T", "L", "W", "L", "L", "T", "L", "T", "W"] }
       ]
     },
     {
@@ -105,6 +105,22 @@ window.TRIP_DATA = {
         { player: "Jon", gross: "87", holes: [5, 5, 4, 4, 3, 6, 6, 4, 4, 6, 5, 5, 5, 4, 5, 4, 8, 4], strokes: [1, 2, 4, 5, 6, 7, 10, 14, 15, 17, 18] },
         { player: "Ben 🍌", gross: "102", holes: [6, 6, 4, 4, 4, 5, 6, 6, 7, 6, 6, 8, 4, 5, 7, 6, 7, 5], strokes: [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18] }
       ],
+    },
+    {
+      id: "pine-needles-group-b-card",
+      course: "Pine Needles — Group B",
+      round: "Round 1",
+      status: "Final posted",
+      note: "Group B final scorecard logged. Match result: Monza/Scott tied front, Paul/Will win back 2 up and total 2 up.",
+      file: "assets/scorecards/pine-needles-group-b-final-2026-05-21.jpg",
+      receivedFrom: "Wes",
+      receivedAt: "May 21, 2026 4:23 PM",
+      scores: [
+        { player: "Paul", gross: "88", holes: [6, 6, 5, 5, 4, 6, 5, 6, 4, 5, 5, 4, 3, 5, 6, 2, 6, 5], strokes: [1, 2, 4, 5, 6, 7, 9, 10, 11, 14, 15, 17, 18] },
+        { player: "Monza", gross: "85", holes: [6, 6, 2, 5, 3, 6, 5, 5, 5, 5, 4, 4, 3, 6, 6, 5, 4, 5], strokes: [2, 5, 6, 7, 10, 14, 15, 17] },
+        { player: "Will", gross: "88", holes: [7, 6, 4, 6, 4, 5, 4, 5, 4, 6, 4, 5, 3, 6, 6, 4, 4, 5], strokes: [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 18] },
+        { player: "Scott", gross: "93", holes: [5, 5, 4, 6, 5, 5, 6, 6, 5, 7, 6, 4, 3, 7, 8, 3, 4, 4], strokes: [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 17, 18] }
+      ]
     },
     {
       id: "mid-pines-card",

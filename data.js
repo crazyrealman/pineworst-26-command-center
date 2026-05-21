@@ -26,12 +26,12 @@ window.TRIP_DATA = {
       tees: "White tees",
       yardage: 6002,
       par: 71,
-      status: "Updated scorecards loaded",
-      hole: null,
+      status: "Live",
+      hole: 7,
       format: "2-man net best ball Nassau",
       scorecardTemplate: "assets/scorecards/pine-needles-updated-scorecards-2026-05-21.pdf",
       matches: [
-        { foursome: "A", teeTime: "11:00 AM", teamA: ["Wes", "Hans"], teamB: ["Ben 🍌", "Jon"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") },
+        { foursome: "A", teeTime: "11:00 AM", teamA: ["Wes", "Hans"], teamB: ["Ben 🍌", "Jon"], front: "Ben/Jon 1 up thru 7", back: "Not started", total: "Ben/Jon 1 up thru 7", money: 0, holes: ["L", "L", "W", "L", "L", "W", "W", "", "", "", "", "", "", "", "", "", "", ""] },
         { foursome: "B", teeTime: "11:10 AM", teamA: ["Monza", "Scott"], teamB: ["Paul", "Will"], front: "Not started", back: "Not started", total: "Not started", money: 0, holes: Array(18).fill("") }
       ]
     },
@@ -94,11 +94,17 @@ window.TRIP_DATA = {
       id: "pine-needles-card",
       course: "Pine Needles",
       round: "Round 1",
-      status: "Saved",
-      note: "Updated Pine Needles round packet with handicap sheet and printable Group 1 / Group 2 scorecards.",
-      file: "assets/scorecards/pine-needles-updated-scorecards-2026-05-21.pdf",
+      status: "Live thru 7",
+      note: "Group A scorecard photo logged through 7. Match: Ben/Jon 1 up over Wes/Hans. Printable packet remains saved in assets/scorecards/pine-needles-updated-scorecards-2026-05-21.pdf.",
+      file: "assets/scorecards/pine-needles-group-a-thru-7-2026-05-21.jpg",
       receivedFrom: "Wes",
-      receivedAt: "May 21, 2026 10:40 AM"
+      receivedAt: "May 21, 2026 12:49 PM",
+      scores: [
+        { player: "Wes", gross: "33 thru 7", holes: [6, 6, 4, 4, 4, 5, 4], strokes: [2, 6, 7] },
+        { player: "Hans", gross: "42 thru 7", holes: [7, 7, 4, 7, 7, 5, 5], strokes: [1, 2, 3, 4, 5, 6, 7] },
+        { player: "Jon", gross: "33 thru 7", holes: [5, 5, 4, 4, 3, 6, 6], strokes: [1, 2, 4, 6, 7] },
+        { player: "Ben 🍌", gross: "35 thru 7", holes: [6, 6, 4, 4, 4, 5, 6], strokes: [1, 2, 4, 5, 6, 7] }
+      ],
     },
     {
       id: "mid-pines-card",
